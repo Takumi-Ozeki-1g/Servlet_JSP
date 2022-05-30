@@ -4,6 +4,13 @@
 <!DOCTYPE html>
 <html>
 <body>
-<p>IDは<%= emp.getId() %>、名前は<%= emp.getname() %>です</p>
+<% for(int i=0;i<10;i++) { %>
+<% if(i%3 == 0) { %>
+<p style="color:red">
+<% } else { %>
+<p>
+<% } %>
+<p><%= i + 1 %>回目: IDは<%= emp.getId() %>、名前は<%= emp.getName() %>です</p>
+<% } %>
 </body>
 </html>
